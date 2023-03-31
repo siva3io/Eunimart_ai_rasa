@@ -1,0 +1,348 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="rasa.list_intent">
+      <field name="name">Rasa Intents</field>
+      <field name="model">rasa_intent</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="intent_type"/>
+          <field name="rasa_response_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="rasa.list_response">
+      <field name="name">Rasa Responses</field>
+      <field name="model">rasa_response</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="code"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="rasa.list_res_questions">
+      <field name="name">Rasa Response Questions</field>
+      <field name="model">rasa_response_questions</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="rasa.list_buttons">
+      <field name="name">Rasa Buttons</field>
+      <field name="model">rasa_response_question_button</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="rasa_response_id"/>
+          <field name="rasa_response_question_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_form_rasa_response_question" model="ir.ui.view">
+      <field name="name">Rasa Response Question Form</field>
+      <field name="model">rasa_response_questions</field>
+      <field name="arch" type="xml">
+        <form string="Rasa Response Question">
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="code"/>
+              <field name="rasa_response_question_button_ids" />
+              <field name="rasa_response_id" />
+              <field name="payload_action" />
+              <field name="attachment" />
+            </group>
+            <group>
+              <field name="form_id" />
+              <field name="media_url" />
+              <field name="html" />
+              <field name="sequence" />
+              <field name="sequence_next" />
+              <field name="alternative_response" />
+              <field name="ondc_payload" />
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_form_rasa_response_question_button" model="ir.ui.view">
+      <field name="name">Rasa Response Question Button Form</field>
+      <field name="model">rasa_response_question_button</field>
+      <field name="arch" type="xml">
+        <form string="Rasa Response Question Button">
+          <group>
+            <group>
+              <field name="name" />
+              <field name="rasa_response_question_id" />
+              <field name="payload_action" />
+              <field name="rasa_response_id" />
+              <field name="sequence" />
+              <field name="sequence_next" />
+            </group>
+            <group>
+              <field name="domain" />
+              <field name="model_id" />
+              <field name="python_code" />
+              <field name="output_python" />
+              <field name="output_json" />
+              <field name="ondc_payload" />
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_form_rasa_context_template" model="ir.ui.view">
+      <field name="name">Rasa Context Template Form</field>
+      <field name="model">rasa.context.template</field>
+      <field name="arch" type="xml">
+        <form string="Rasa Context Template">
+          <group>
+            <group>
+              <field name="name" />
+              <field name="code" />
+              <field name="response_id" />
+            </group>
+            <group>
+              <field name="mandatory" />
+              <field name="temporary" />
+              <field name="priority" />
+              <field name="parent_id" />
+            </group>
+          </group>
+          <group>
+            <field name="context_line_ids" />
+            <field name="child_ids" />
+            <field name="rasa_nlu_path" />
+            <field name="eda_context" />
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_form_rasa_context_workflow_line" model="ir.ui.view">
+      <field name="name">Rasa Context Workflow Line Form</field>
+      <field name="model">rasa.context.workflow.line</field>
+      <field name="arch" type="xml">
+        <form string="Rasa Context Workflow Line">
+          <group>
+            <group>
+              <field name="name" />
+              <field name="context_template_id" />
+              <field name="rasa_response_id" />
+            </group>
+            <group>
+              <field name="sequence" />
+              <field name="next_sequence" />
+              <field name="is_mandatory" />
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_form_rasa_context_template_line" model="ir.ui.view">
+      <field name="name">Rasa Context Template Line Form</field>
+      <field name="model">rasa.context.template.line</field>
+      <field name="arch" type="xml">
+        <form string="Rasa Context Template Line">
+          <group>
+            <group>
+              <field name="rel_response_id" />
+              <field name="sequence" />
+            </group>
+            <group>
+              <field name="next_sequence" />
+              <field name="python_code" />
+            </group>
+
+            <group>
+              <field name="template_id" />
+              <field name="next_context_id" />
+              <field name="rasa_nlu_path" />
+              <field name="next_response_id" />
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="rasa.list_context_template_line">
+      <field name="name">Rasa Context Template Line</field>
+      <field name="model">rasa.context.template.line</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="rel_response_id"/>
+          <field name="sequence"/>
+          <field name="next_sequence"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="rasa.list_apis">
+      <field name="name">Rasa APIs</field>
+      <field name="model">rasa_apis</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="http_method"/>
+          <field name="name"/>
+          <field name="module_name"/>
+          <field name="authentication"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="rasa.list_forms">
+      <field name="name">Rasa Forms</field>
+      <field name="model">rasa_forms</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="rasa_response_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="rasa.action_window_1">
+      <field name="name">Rasa Intents</field>
+      <field name="res_model">rasa_intent</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_window_2">
+      <field name="name">Rasa Responses</field>
+      <field name="res_model">rasa_response</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_window_3">
+      <field name="name">Rasa Response Questions</field>
+      <field name="res_model">rasa_response_questions</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_window_4">
+      <field name="name">Rasa Buttons</field>
+      <field name="res_model">rasa_response_question_button</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="rasa.action_window_5">
+      <field name="name">rasa APIs</field>
+      <field name="res_model">rasa_apis</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_window_6">
+      <field name="name">Rasa Forms</field>
+      <field name="res_model">rasa_forms</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_context_template">
+      <field name="name">Context Template</field>
+      <field name="res_model">rasa.context.template</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="context_template_view_tree" model="ir.ui.view">
+        <field name="name">context_template_view_tree</field>
+        <field name="model">rasa.context.template</field>
+        <field name="arch" type="xml">
+            <tree string="context_template_tree">
+                <field name="name"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_context_data">
+      <field name="name">Context Data</field>
+      <field name="res_model">rasa.context.data</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="rasa.action_rasa_notification">
+      <field name="name">Rasa Notification</field>
+      <field name="res_model">rasa.notification</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="chatbot_user_action" model="ir.actions.act_window">
+        <field name="name">Chatbot User</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">chatbot.user</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="eda_response_manager_action" model="ir.actions.act_window">
+        <field name="name">EDA Response manager</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">eda.response.manager</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="rasa_data_mapper_action" model="ir.actions.act_window">
+        <field name="name">Rasa Data Mapper</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rasa.data.mapper</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+
+   <!-- <record model="ir.actions.server" id="rasa.action_server">
+      <field name="name">rasa server</field>
+      <field name="model_id" ref="model_rasa_rasa"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Rasa Management" id="rasa.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Rasa Intent" id="rasa.intent" parent="rasa.menu_root" action="rasa.action_window_1"/>
+    <menuitem name="Rasa Response" id="rasa.response" parent="rasa.menu_root" action="rasa.action_window_2"/>
+    <menuitem name="Rasa Response Questions" id="rasa.res_questions" parent="rasa.menu_root" action="rasa.action_window_3"/>
+    <menuitem name="Rasa Response Buttons" id="rasa.buttons" parent="rasa.menu_root" action="rasa.action_window_4"/>
+    <menuitem name="Rasa APIs" id="rasa.apis" parent="rasa.menu_root" action="rasa.action_window_5"/>
+    <menuitem name="Rasa Forms" id="rasa.forms" parent="rasa.menu_root" action="rasa.action_window_6"/>
+    <menuitem name="Context Template" id="rasa_context_template" parent="rasa.menu_root" action="rasa.action_context_template"/>
+    <menuitem name="Context Data" id="rasa_context_data" parent="rasa.menu_root" action="rasa.action_context_data"/>
+    <menuitem name="Rasa Notification" id="rasa_notification" parent="rasa.menu_root" action="rasa.action_rasa_notification"/>
+    <menuitem name="Chatbot User" id="chatbot_user" parent="rasa.menu_root" action="chatbot_user_action"/>
+    <menuitem name="EDA Response Manager" id="eda_response_manager" parent="rasa.menu_root" action="eda_response_manager_action"/>
+    <menuitem name="Rasa Data Mapper" id="rasa_data_mapper" parent="rasa.menu_root" action="rasa_data_mapper_action"/>
+
+    <!-- actions -->
+<!--
+    <menuitem name="List of Intents" id="rasa.intent_list" parent="rasa.intent" action="rasa.action_window_1"/>
+    <menuitem name="List of Response" id="rasa.response_list" parent="rasa.response" action="rasa.action_window_2"/>
+    <menuitem name="List of Response Questions" id="rasa.res_question_list" parent="rasa.res_questions" action="rasa.action_window_3"/>
+    <menuitem name="List of Buttons" id="rasa.button_list" parent="rasa.buttons" action="rasa.action_window_4"/>
+-->
+  </data>
+</odoo>

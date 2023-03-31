@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eng-interface-373905",
+  "private_key_id": "d8e41b3204d952ccff06ca99e73775c7e099644e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4A9Yyh9RkE1s1\nWk4KXnKB6pKtmT1CT6TgDbuxEkPeK+1qbZGrgxSnejj0IHe++PACAoIJnxAbOU0x\nuMFvtGzjmtOCizAKoPkmQtYLMfqbKZH7DdPpTW3N7Lok/nAqgGHZPYGP62oniJL0\nhJWDZynRGGsWxZ1+o7VvXQWKI+cOCV/8IUJt/SsEN1PqNmA/M18ckl60SQtqj35O\nFK3U7BM3oo+FwpONFHTWCe8V+E205L2R/mKKGV+kVw0FtAOOLim1N9fsD4oPwT6E\nUp3raXluWfdUImjq6NMOa/Jlx+KDSEZu6p3shtKZZbb/W+TTP7pT317jJ4KbYypm\n6CpFcVN1AgMBAAECggEABLF4W5aSSLEjsOMqPWJ2SjD457uST+gnHN3MzTHZkEeP\niRjdT8IKm1DnNfbEBxdjS7HTrjoj14XpHZ0INfiklFOFFH3HTmYXpK2stuFh8mYn\nhn8uSfODGu7wOnRQ2QyoMjm63bhT30lA8kKVa6IMc3xLcuu8Xhf/zyTQuNq8kGOK\nsQ/AfP8VYXoVNHBt5M1/IhF4OH4i0VS3NxvKBYImulXQEeSWzT5lNPXDyhN4Y3M6\nD9uH00mhseFBqI3iboc5BOU3FTdGzWVkXc0lAJjXQFMhAebvOalFUjPBJHEjDbeu\n931YVeX9xKlrZKml98snN5WALT9WtXhFQ6jQJkRLewKBgQDw0jRDGb2DcGSfVdek\n9ta6SdlGJD99KWH5ZDMOIa6sXwCZlAD5tF7YHDyPgpUwAZdWqY6vyvvuf2bpyKNZ\nlJgTz3FzbdqEgapHL7aWPfpN8r5k52uv+nw7os6lunct53LWxkAGk20iCYfWW9eH\n5Ar6aUoQvlzo0QwcIWrAIRavowKBgQDDnQfx92zauORxkg1a1eUJ+P8LPm1dofeZ\n7EEsVAbrLMkbSGsJwKI+3QhM1qjOryZE0V9IVME+rXvi8St36Aa5cy2zEo9hf6nN\naaqvuqEyzxiSpk8raJNXtjCVKI3QvDCcvJr+/00MR2UuqLfNqn9CI5m08yqi2x0g\ngfmAB/PCBwKBgQCIJZ7MTLIarCEG/6YBqldtTDDc+cM3BH1SXDaNB7fT1YXmTYlb\nooB4V0ZZr+6eDFg983AqrGxPwpExHHBVRa/Qi1fNdU6z2QamZjAosnNfPBwtubPk\n8oznvjxr74ZPWmlPSReLYC+zrYWxR40LU35tYbcwzh6CtSTOhonugwZrVwKBgG3x\nvbx3B7yrfOKEZ3Mtk20WgSrtrISa+1KNIlhq5fSamHH4MwkpN0fD7d1aLUj10rmN\nQFOkJ3U2BtKYIIllZRoorX/fp6zyFxs4D9JzQBURp0sNpKPORDphUU8Umxi+HUiL\nDUbTcZe8LRebhqtW7+3ZmpPEtKsSIn3Z78TRM2VTAoGBAMKlYA2SrOIFjsYfVB2u\nxiaphQK5dtF5FzC14vfVvO84CejOPGBO3n84/2dXxiWPDe4KtWv+d2e07v6oIaB9\n59o0LGXHudkAgjj2s2VmaoKnB6/YCJjHIqii9KoI8pn87CoC+RBO1R9Dv+IuQYOL\nbGobgybmjRLMXyJ+4ttZKJKk\n-----END PRIVATE KEY-----\n",
+  "client_email": "datalabs-siva3@eng-interface-373905.iam.gserviceaccount.com",
+  "client_id": "101651841104430459776",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datalabs-siva3%40eng-interface-373905.iam.gserviceaccount.com"
+}
+
